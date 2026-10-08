@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join us | Stangl Lab</title>
+  <meta name="description"
+        content="Join the Stangl Lab at Boston University.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: white;
+      color: #111;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #b30815;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #b30815;
+      outline-offset: 5px;
+    }
+
+    .site-header {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 12px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      border-bottom: 4px solid #e5e5e5;
+    }
+
+    .header-logo {
+      display: block;
+      width: 220px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .site-nav a {
+      color: #111;
+      font-size: 15px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .site-nav a[aria-current="page"],
+    .site-nav a:hover {
+      color: #b30815;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 24px 28px;
+    }
+
+    h1 {
+      margin: 0 0 48px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    section + section {
+      margin-top: 26px;
+    }
+
+    h2 {
+      margin: 0 0 2px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    p { margin: 0; }
+
+    .site-footer {
+      background: #e6e6e6;
+      padding: 7px 24px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+      .site-header {
+        margin: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 0;
+      }
+
+      .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
+      }
+
+      .site-nav a { font-size: 13px; }
+
+      main { padding-top: 28px; }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 32px;
+      }
+
+      h2 { font-size: 21px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="{{ "/" | relURL }}" aria-label="Stangl Lab home">
+      {{ with resources.Get "media/stangl-lab-logo.png" }}
+        <img class="header-logo"
+             src="{{ .RelPermalink }}"
+             alt="Stangl Lab">
+      {{ end }}
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ "/" | relURL }}">HOME</a>
+      <a href="https://www.stangl-lab.com/research">RESEARCH</a>
+      <a href="https://www.stangl-lab.com/team">TEAM</a>
+      <a href="https://www.stangl-lab.com/publications">PUBLICATIONS</a>
+      <a href="{{ "/join-us/" | relURL }}"
+         aria-current="page">JOIN US</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>JOIN THE TEAM</h1>
+
+    <section aria-labelledby="postdocs">
+      <h2 id="postdocs">Postdocs</h2>
+      <p>
+        We do not have openings for postdocs at this time.
+        If you are interested in writing a joint proposal to apply
+        for funding through a fellowship (such as the
+        <a href="https://www.bu.edu/csn/opportunities/postdocs/apply/">BU Center for Systems Neuroscience Postdoc Fellowship</a>)
+        or other internal/external funding mechanisms,
+        please reach out to:
+        <a href="mailto:mstangl@bu.edu">mstangl@bu.edu</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="prospective-phd">
+      <h2 id="prospective-phd">Prospective PhD students</h2>
+      <p>
+        There are several pathways to joining the lab as a PhD
+        student, including the
+        <a href="https://www.bu.edu/eng/academics/explore-degree-programs/phd-in-biomedical-engineering/">PhD Program in Biomedical Engineering (BME)</a>,
+        the
+        <a href="https://www.bu.edu/psych/academics/phd/bbc/">PhD Program in Brain, Behavior, and Cognition (BBC)</a>,
+        and the
+        <a href="https://www.bu.edu/neuro/academics/graduate/">Graduate Program in Neuroscience (GPN)</a>.
+        Please find more information about these programs at
+        their respective website.
+      </p>
+    </section>
+
+    <section aria-labelledby="admitted-phd">
+      <h2 id="admitted-phd">Admitted PhD students at Boston University</h2>
+      <p>
+        If you would like to do a lab rotation or join the lab as
+        a PhD student, and you have already been admitted to a PhD
+        program at Boston University, please reach out to:
+        <a href="mailto:mstangl@bu.edu">mstangl@bu.edu</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="student-opportunities">
+      <h2 id="student-opportunities">Undergraduate and Master's students</h2>
+      <p>
+        If you are interested in cognitive neuroscience, human
+        brain imaging methods, and data analysis, we would love
+        to hear from you and explore options. Please reach out to:
+        <a href="mailto:mstangl@bu.edu">mstangl@bu.edu</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="vr-ar">
+      <h2 id="vr-ar">VR/AR game designers and software engineers</h2>
+      <p>
+        We are looking for talented and motivated virtual reality
+        (VR) and augmented reality (AR) game designers and software
+        engineers. If you are interested in developing virtual
+        environments and objects for cognitive neuroscience studies,
+        please reach out to:
+        <a href="mailto:mstangl@bu.edu">mstangl@bu.edu</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Stangl Lab<br>
+      Boston University<br>
+      610 Commonwealth Ave<br>
+      Boston, MA 02215
+    </p>
+  </footer>
+</body>
+</html>
