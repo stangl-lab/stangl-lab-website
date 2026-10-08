@@ -4,7 +4,7 @@ summary: Research lab studying the neural basis of human cognition and behavior 
 date: 2026-07-23
 design:
   spacing: 6rem
-type: landing
+type: stangl-home
 sections:
   - block: hero
     content:
