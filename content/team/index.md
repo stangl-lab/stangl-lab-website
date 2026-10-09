@@ -13,6 +13,11 @@ members:
     email: "jgonzal2@bu.edu"
     photo: "https://static.wixstatic.com/media/ddd28d_1dd982ae69dc4ad197f9ebc80f922691~mv2.jpg"
 
+  - name: "Yue Guzhang"
+    role: "Postdoctoral Associate"
+    email: "yguzhang@bu.edu"
+    photo: "uploads/YueGuzhang_profile.png"
+
   - name: "Julia Schneiders, PhD"
     role: "Research Scientist"
     email: "jschn@bu.edu"
@@ -38,22 +43,15 @@ members:
     email: "lstith@bu.edu"
     photo: "https://static.wixstatic.com/media/ddd28d_978fc310e1eb4497aa0ff2385c66c82f~mv2.jpg"
 
+alumni:
   - name: "Megan Bell"
     role: "Master's Student"
-    email: "megbell@bu.edu"
-    photo: "https://static.wixstatic.com/media/ddd28d_f3e32dabfcae484ead087689e0b7c2f2~mv2.jpg"
-
-  - name: "Isabella Novikov"
-    role: "Undergraduate Student"
-    email: "inovikov@bu.edu"
-    photo: "https://static.wixstatic.com/media/ddd28d_76bd69e96b92496fa7a8b51482a10610~mv2.jpeg"
+    years: "2025–2026"
 
   - name: "Elizabeth Wang"
     role: "Undergraduate Student"
-    email: "ewang26@bu.edu"
-    photo: "https://static.wixstatic.com/media/ddd28d_c342c3698833467494a01db0ab9a9f6e~mv2.jpeg"
+    years: "2024–2026"
 
-alumni:
   - name: "Daniel Jiang"
     role: "Master's Student"
     years: "2024–2025"
