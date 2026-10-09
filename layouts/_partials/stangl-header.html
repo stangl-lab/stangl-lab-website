@@ -1,12 +1,15 @@
-<header class="stangl-header">
-  <a class="stangl-brand"
-     href="{{ "/" | relURL }}"
-     aria-label="Stangl Lab home">
-    {{ with resources.Get "media/stangl-lab-logo.png" }}
-      <img src="{{ .RelPermalink }}" alt="Stangl Lab"
-           width="220">
-    {{ end }}
-  </a>
+<header class="stangl-header{{ if .IsHome }} stangl-header-home{{ end }}">
+  {{ if not .IsHome }}
+    <a class="stangl-brand"
+       href="{{ "/" | relURL }}"
+       aria-label="Stangl Lab home">
+      {{ with resources.Get "media/stangl-lab-logo.png" }}
+        <img src="{{ .RelPermalink }}"
+             alt="Stangl Lab"
+             width="220">
+      {{ end }}
+    </a>
+  {{ end }}
 
   <nav class="stangl-menu" aria-label="Main navigation">
     <a href="{{ "/" | relURL }}"
