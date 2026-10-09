@@ -213,7 +213,7 @@
       {{ range .Params.members }}
         <article class="team-member">
           <img class="team-photo"
-               src="{{ .photo }}"
+               src="{{ .photo | relURL }}"
                alt="{{ .name }}"
                width="160"
                height="160"
