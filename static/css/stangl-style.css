@@ -309,3 +309,10 @@ main > section[aria-labelledby="postdocs"] ~ section {
 .method-card .method-body {
   border-top: none;
 }
+
+/* Fit the homepage introduction on one line on wider screens */
+@media (min-width: 1040px) {
+  .stangl-home-main .intro {
+    font-size: 18px;
+  }
+}
