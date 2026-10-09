@@ -344,3 +344,23 @@ main > section[aria-labelledby="postdocs"] ~ section {
   font-size: 16px;
   line-height: 1.4;
 }
+
+/* Desktop homepage: keep the existing large logo. */
+.stangl-header-home .stangl-brand {
+  display: none;
+}
+
+/* Mobile homepage: use the same header logo as other pages. */
+@media (max-width: 800px) {
+  .stangl-header-home .stangl-brand {
+    display: block;
+  }
+
+  .stangl-home-main .lab-logo {
+    display: none;
+  }
+
+  .stangl-home-main {
+    padding-top: 30px;
+  }
+}
