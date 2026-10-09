@@ -338,3 +338,9 @@ main > section[aria-labelledby="postdocs"] ~ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Consistent, smaller headings in all research boxes */
+.method-card .method-title {
+  font-size: 16px;
+  line-height: 1.4;
+}
