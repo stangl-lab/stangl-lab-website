@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }} | Stangl Lab</title>
+  <meta name="description"
+        content="Research publications from the Stangl Lab at Boston University.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="{{ "css/stangl-navigation.css" | relURL }}">
+
+  {{ if fileExists "static/favicon.png" }}
+    <link rel="icon" type="image/png"
+          href="{{ "favicon.png" | relURL }}">
+  {{ end }}
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .publications-main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 28px 80px;
+    }
+
+    .publications-heading {
+      margin: 0 0 48px;
+      text-align: center;
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      line-height: 1.25;
+    }
+
+    .publication-year {
+      margin: 46px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #222;
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .publication-year:first-child {
+      margin-top: 0;
+    }
+
+    .publication {
+      padding: 25px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .publication-title {
+      margin: 0 0 7px;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .publication-title a {
+      color: #b30815;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    .publication-title a:hover,
+    .publication-title a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .publication-title a:focus-visible {
+      outline: 2px solid #b30815;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .publication-authors {
+      margin: 0 0 5px;
+      color: #333;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .publication-citation {
+      margin: 0;
+      color: #333;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .publication-citation strong {
+      font-weight: 700;
+    }
+
+    .publication-note {
+      margin: 7px 0 0;
+      color: #666;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .stangl-footer {
+      padding: 32px 24px;
+      background: #e6e6e6;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .stangl-footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .publications-main {
+        padding: 30px 20px 55px;
+      }
+
+      .publications-heading {
+        margin-bottom: 34px;
+      }
+
+      .publication-title {
+        font-size: 17px;
+      }
+
+      .publication {
+        padding: 22px 0;
+      }
+
+      .publication-authors,
+      .publication-citation {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  {{ partial "stangl-header.html" . }}
+
+  <main class="publications-main">
+    <h1 class="publications-heading">PUBLICATIONS</h1>
+
+    <div class="publications-list">
+      {{ $currentYear := 0 }}
+
+      {{ range sort .Params.publications "year" "desc" }}
+        {{ if ne .year $currentYear }}
+          <h2 class="publication-year">{{ .year }}</h2>
+          {{ $currentYear = .year }}
+        {{ end }}
+
+        <article class="publication">
+          <h3 class="publication-title">
+            <a href="{{ .url }}">{{ .title }}</a>
+          </h3>
+
+          <p class="publication-authors">{{ .authors }}</p>
+
+          <p class="publication-citation">
+            {{ with .context }}{{ . }} {{ end }}
+            <strong>{{ .venue }}</strong>{{ if not .context }},{{ end }}
+            {{ .details }}
+          </p>
+
+          {{ with .note }}
+            <p class="publication-note">{{ . }}</p>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </main>
+
+  <footer class="stangl-footer">
+    <p><strong>Stangl Lab</strong></p>
+    <p>Boston University</p>
+    <p>610 Commonwealth Avenue · Boston, MA 02215</p>
+  </footer>
+</body>
+</html>
