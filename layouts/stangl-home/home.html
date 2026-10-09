@@ -149,14 +149,15 @@
   <link rel="stylesheet"
      href="{{ "css/stangl-navigation.css" | relURL }}">
 
-  
+<link rel="stylesheet"
+      href="{{ "css/stangl-style.css" | relURL }}">  
 </head>
 
 <body>
   
   {{ partial "stangl-header.html" . }}
 
-  <main>
+  <main class="stangl-home-main">
     {{ with resources.Get "media/stangl-lab-logo.png" }}
       <img class="lab-logo"
            src="{{ .RelPermalink }}"
