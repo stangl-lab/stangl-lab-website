@@ -1,0 +1,24 @@
+<header class="stangl-header">
+  <a class="stangl-brand"
+     href="{{ "/" | relURL }}"
+     aria-label="Stangl Lab home">
+    {{ with resources.Get "media/stangl-lab-logo.png" }}
+      <img src="{{ .RelPermalink }}" alt="Stangl Lab"
+           width="220">
+    {{ end }}
+  </a>
+
+  <nav class="stangl-menu" aria-label="Main navigation">
+    <a href="{{ "/" | relURL }}"
+       {{ if .IsHome }}aria-current="page"{{ end }}>HOME</a>
+
+    <a href="https://www.stangl-lab.com/research">RESEARCH</a>
+
+    <a href="https://www.stangl-lab.com/team">TEAM</a>
+
+    <a href="https://www.stangl-lab.com/publications">PUBLICATIONS</a>
+
+    <a href="{{ "/join-us/" | relURL }}"
+       {{ if eq .Type "stangl-join" }}aria-current="page"{{ end }}>JOIN US</a>
+  </nav>
+</header>
