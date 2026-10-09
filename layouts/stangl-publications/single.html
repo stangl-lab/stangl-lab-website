@@ -165,13 +165,8 @@
     <h1 class="publications-heading">PUBLICATIONS</h1>
 
     <div class="publications-list">
-      {{ $currentYear := 0 }}
-
+      
       {{ range sort .Params.publications "year" "desc" }}
-        {{ if ne .year $currentYear }}
-          <h2 class="publication-year">{{ .year }}</h2>
-          {{ $currentYear = .year }}
-        {{ end }}
 
         <article class="publication">
           <h3 class="publication-title">
