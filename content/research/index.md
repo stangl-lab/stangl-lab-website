@@ -2,8 +2,8 @@
 title: "Research"
 type: stangl-research
 
-focus_image: "https://static.wixstatic.com/media/ddd28d_66c60eb5a26d48b5bb7a7bc4b29562d5~mv2.png"
-methods_image: "https://static.wixstatic.com/media/ddd28d_80e73ba1a0cb4905ac4bdce42470b446~mv2.png"
+focus_image: "uploads/research-focus.png"
+methods_image: "uploads/research-methods.png"
 
 focus: >-
   Spatial navigation and memory are among the most fundamental abilities
@@ -31,7 +31,7 @@ goals:
 
 methods:
   - title: "Intracranial recordings during natural movement and behavior"
-    image: "https://static.wixstatic.com/media/ddd28d_af77e8569d1e403e92207a579f928f03~mv2.jpg"
+    image: "uploads/research-rns.jpg"
     alt: "Responsive neurostimulation recording setup"
     text: >-
       Our lab works with a rare group of individuals who have so-called
@@ -43,7 +43,7 @@ methods:
       deep brain regions in humans during everyday life activities.
 
   - title: "Intracranial recordings of local field potential and single-neuron activity"
-    image: "https://static.wixstatic.com/media/ddd28d_f4f0319b292b46e69d5428d96c71387d~mv2.jpg"
+    image: "uploads/research-emu.jpg"
     alt: "Intracranial recording setup in the epilepsy monitoring unit"
     text: >-
       Hospitalized patients undergoing seizure monitoring provide another
@@ -54,7 +54,7 @@ methods:
       on a computer screen or via immersive virtual reality devices.
 
   - title: "Non-invasive neuroimaging methods"
-    image: "https://static.wixstatic.com/media/ddd28d_0f5242195c2448d9b47bf61d4112924e~mv2.jpg"
+    image: "uploads/research-noninvasive.jpg"
     alt: "Functional MRI and scalp EEG methods"
     text: >-
       Functional magnetic resonance imaging (fMRI) enables us to record
@@ -67,7 +67,7 @@ methods:
       settings.
 
   - title: "Wearable technologies, motion tracking, and virtual reality"
-    image: "https://static.wixstatic.com/media/ddd28d_2f42b7902651469d9412712158564720~mv2.jpg"
+    image: "uploads/research-wearables.jpg"
     alt: "Wearable measurement systems and motion tracking"
     text: >-
       Studying freely moving participants in complex scenarios and real-world
