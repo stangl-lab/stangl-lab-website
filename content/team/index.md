@@ -11,7 +11,7 @@ members:
   - name: "Juliana Gonzalez-Astudillo, PhD"
     role: "Postdoctoral Associate"
     email: "jgonzal2@bu.edu"
-    photo: "uploads/juliana-gonzalez-astudillo.jpeg"
+    photo: "uploads/juliana-gonzalez-astudillo.jpg"
 
   - name: "Yue Guzhang, PhD"
     role: "Postdoctoral Associate"
@@ -21,27 +21,27 @@ members:
   - name: "Julia Schneiders, PhD"
     role: "Research Scientist"
     email: "jschn@bu.edu"
-    photo: "uploads/yue-guzhang.jpeg"
+    photo: "uploads/julia-schneiders.png"
 
   - name: "Sung Ahn"
     role: "PhD Student"
     email: "ahnsm@bu.edu"
-    photo: "uploads/sung-ahn.jpeg"
+    photo: "uploads/sung-ahn.jpg"
 
   - name: "Michael Bick"
     role: "PhD Student"
     email: "mvbick@bu.edu"
-    photo: "uploads/michael-bick.jpeg"
+    photo: "uploads/michael-bick.jpg"
 
   - name: "Sharayu Shrinivas"
     role: "PhD Student"
     email: "sshriniv@bu.edu"
-    photo: "uploads/sharayu-shrinivas.jpeg"
+    photo: "uploads/sharayu-shrinivas.png"
 
   - name: "Lea Stith"
     role: "PhD Student"
     email: "lstith@bu.edu"
-    photo: "uploads/lea-stith.jpeg"
+    photo: "uploads/lea-stith.jpg"
 
 alumni:
   - name: "Megan Bell"
