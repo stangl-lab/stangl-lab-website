@@ -4,7 +4,7 @@ main:
     weight: 10
 
   - name: RESEARCH
-    url: https://www.stangl-lab.com/research
+    url: research/
     weight: 20
 
   - name: TEAM
@@ -12,7 +12,7 @@ main:
     weight: 30
 
   - name: PUBLICATIONS
-    url: https://www.stangl-lab.com/publications
+    url: publications/
     weight: 40
 
   - name: JOIN US
