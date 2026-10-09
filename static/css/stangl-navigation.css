@@ -1,4 +1,4 @@
-/* Reserve scrollbar space so pages do not shift horizontally. */
+/* Prevent horizontal shifts between long and short pages. */
 html {
   overflow-y: scroll;
 }
@@ -7,15 +7,26 @@ html {
   box-sizing: border-box;
   width: calc(100% - 40px);
   max-width: 980px;
-  min-height: 88px;
+  height: 88px;
   margin: 0 auto;
-  padding: 14px 12px 12px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  border-bottom: 4px solid #e5e5e5;
+  position: relative;
   font-family: "Montserrat", sans-serif;
+}
+
+/* Sub-pages: divider across the whole header. */
+.stangl-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e5e5e5;
 }
 
 .stangl-brand {
@@ -31,9 +42,12 @@ html {
 }
 
 .stangl-menu {
+  align-self: stretch;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 32px;
+  padding: 0 8px;
 }
 
 .stangl-menu a {
@@ -55,11 +69,32 @@ html {
   outline-offset: 5px;
 }
 
+/* Homepage: same menu position, without the small logo. */
+.stangl-header-home {
+  justify-content: flex-end;
+}
+
+.stangl-header-home::after {
+  display: none;
+}
+
+/* Homepage: divider only beneath the menu. */
+.stangl-header-home .stangl-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e5e5e5;
+}
+
 @media (max-width: 800px) {
   .stangl-header {
+    height: auto;
     flex-direction: column;
     gap: 20px;
-    padding: 18px 0;
+    padding: 18px 0 0;
   }
 
   .stangl-brand {
@@ -67,9 +102,11 @@ html {
   }
 
   .stangl-menu {
+    align-self: stretch;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px 24px;
+    padding: 0 0 18px;
   }
 
   .stangl-menu a {
