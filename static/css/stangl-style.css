@@ -280,3 +280,27 @@ main > section[aria-labelledby="postdocs"] ~ section {
   border-right-width: 2px;
   border-bottom-width: 2px;
 }
+
+/* Subpages: match the Alumni divider's thickness and color */
+.stangl-header::after {
+  display: block;
+  height: 2px;
+  background: #ccc;
+}
+
+/* Homepage: hide the full-width divider */
+.stangl-header-home::after {
+  display: none;
+}
+
+/* Homepage: show the divider only beneath the menu */
+.stangl-header-home .stangl-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ccc;
+}
