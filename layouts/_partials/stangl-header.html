@@ -21,7 +21,8 @@
     <a href="{{ "team/" | relURL }}"
        {{ if eq .Type "stangl-team" }}aria-current="page"{{ end }}>TEAM</a>
 
-    <a href="https://www.stangl-lab.com/publications">PUBLICATIONS</a>
+    <a href="{{ "publications/" | relURL }}"
+   {{ if eq .Type "stangl-publications" }}aria-current="page"{{ end }}>PUBLICATIONS</a>
 
     <a href="{{ "join-us/" | relURL }}"
        {{ if eq .Type "stangl-join" }}aria-current="page"{{ end }}>JOIN US</a>
