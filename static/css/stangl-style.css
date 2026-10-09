@@ -207,3 +207,76 @@ main > section[aria-labelledby="postdocs"] ~ section {
     font-size: 13px;
   }
 }
+
+
+/* Consistent menu typography on every page */
+.stangl-menu a {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.stangl-menu a:hover,
+.stangl-menu a[aria-current="page"] {
+  color: #b30815;
+}
+
+/* Same full-width header divider on every page */
+.stangl-header::after,
+.stangl-header-home::after {
+  display: block;
+  height: 4px;
+  background: #ccc;
+}
+
+.stangl-header-home .stangl-menu::after {
+  display: none;
+}
+
+/* Let each team member's text follow its natural height */
+.team-grid {
+  align-items: start;
+}
+
+.team-name {
+  min-height: 0;
+  margin: 0 0 3px;
+}
+
+.team-role {
+  min-height: 0;
+  margin: 0 0 2px;
+  line-height: 1.5;
+}
+
+.team-icons {
+  margin: 0;
+}
+
+/* More visible separators and research boxes */
+.alumni {
+  border-top: 2px solid #ccc;
+}
+
+.publication {
+  border-bottom: 2px solid #ccc;
+}
+
+.method-card {
+  border: 2px solid #ccc;
+}
+
+.method-body {
+  border-top: 2px solid #ccc;
+}
+
+.method-toggle {
+  border: 2px solid #ccc;
+}
+
+.method-toggle::after {
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
