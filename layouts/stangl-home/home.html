@@ -143,18 +143,16 @@
       .intro, .description { margin-bottom: 28px; }
     }
   </style>
+
+  <link rel="stylesheet"
+      href="{{ "/css/stangl-navigation.css" | relURL }}">
+
+  
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="{{ "/" | relURL }}" aria-current="page">HOME</a>
-      <a href="https://www.stangl-lab.com/research">RESEARCH</a>
-      <a href="https://www.stangl-lab.com/team">TEAM</a>
-      <a href="https://www.stangl-lab.com/publications">PUBLICATIONS</a>
-      <a href="{{ "/join-us/" | relURL }}">JOIN US</a>
-    </nav>
-  </header>
+  
+  {{ partial "stangl-header.html" . }}
 
   <main>
     {{ with resources.Get "media/stangl-lab-logo.png" }}
