@@ -304,3 +304,8 @@ main > section[aria-labelledby="postdocs"] ~ section {
   height: 2px;
   background: #ccc;
 }
+
+/* Remove the internal divider in expanded research boxes */
+.method-card .method-body {
+  border-top: none;
+}
