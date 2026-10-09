@@ -17,7 +17,8 @@
 
     <a href="https://www.stangl-lab.com/research">RESEARCH</a>
 
-    <a href="https://www.stangl-lab.com/team">TEAM</a>
+    <a href="{{ "/team/" | relURL }}"
+       {{ if eq .Type "stangl-team" }}aria-current="page"{{ end }}>TEAM</a>
 
     <a href="https://www.stangl-lab.com/publications">PUBLICATIONS</a>
 
