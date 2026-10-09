@@ -1,5 +1,4 @@
 <header class="stangl-header{{ if .IsHome }} stangl-header-home{{ end }}">
-  {{ if not .IsHome }}
     <a class="stangl-brand"
        href="{{ "" | relURL }}"
        aria-label="Stangl Lab home">
@@ -9,7 +8,6 @@
              width="220">
       {{ end }}
     </a>
-  {{ end }}
 
   <nav class="stangl-menu" aria-label="Main navigation">
     <a href="{{ "" | relURL }}"
