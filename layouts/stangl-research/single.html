@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Stangl Lab</title>
+  <meta name="description"
+        content="Spatial navigation, memory, and multimodal neuroimaging research at the Stangl Lab, Boston University.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="{{ "css/stangl-navigation.css" | relURL }}">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: white;
+      color: #111;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #b30815;
+      text-underline-offset: 2px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid #b30815;
+      outline-offset: 5px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 20px 40px;
+    }
+
+    h1,
+    .methods-heading {
+      margin: 0 0 22px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p { margin: 0; }
+
+    .focus-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 391px;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .focus-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .approach {
+      margin-top: 24px;
+    }
+
+    .research-goals {
+      margin: 24px 0 0;
+      padding-left: 28px;
+      font-weight: 700;
+    }
+
+    .research-goals li + li {
+      margin-top: 24px;
+    }
+
+    .methods {
+      margin-top: 60px;
+    }
+
+    .methods-heading {
+      margin-bottom: 28px;
+    }
+
+    .methods-image {
+      display: block;
+      width: 100%;
+      max-width: 914px;
+      height: auto;
+      margin: 0 auto 40px;
+    }
+
+    .method-list {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .method-card {
+      margin-top: 26px;
+      border: 1px solid #ddd;
+      background: white;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+    }
+
+    .method-card:first-child {
+      margin-top: 0;
+    }
+
+    .method-card summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 18px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .method-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .method-title {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .method-toggle {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 140px;
+      padding: 10px 14px;
+      border: 1px solid #888;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .method-toggle::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-right: 1px solid #b30815;
+      border-bottom: 1px solid #b30815;
+      transform: rotate(45deg);
+    }
+
+    .collapse-label {
+      display: none;
+    }
+
+    .method-card[open] .read-label {
+      display: none;
+    }
+
+    .method-card[open] .collapse-label {
+      display: inline;
+    }
+
+    .method-card[open] .method-toggle::after {
+      transform: rotate(225deg);
+    }
+
+    .method-card summary:hover .method-toggle {
+      background: #f9e9eb;
+    }
+
+    .method-body {
+      display: grid;
+      grid-template-columns: minmax(0, 290px) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      padding: 20px 18px 24px;
+      border-top: 1px solid #eee;
+    }
+
+    .method-body img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .site-footer {
+      background: #e6e6e6;
+      padding: 7px 24px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+      .focus-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .focus-image {
+        max-width: 391px;
+        margin: 0 auto;
+      }
+
+      h1,
+      .methods-heading {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .method-card summary {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .method-body {
+        grid-template-columns: 1fr;
+        padding: 20px 16px;
+      }
+
+      .method-body img {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .methods {
+        margin-top: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  {{ partial "stangl-header.html" . }}
+
+  <main>
+    <section aria-labelledby="research-focus">
+      <h1 id="research-focus">RESEARCH FOCUS</h1>
+
+      <div class="focus-row">
+        <p>{{ .Params.focus }}</p>
+
+        <img class="focus-image"
+             src="{{ .Params.focus_image }}"
+             alt="Illustration of cognition and spatial navigation">
+      </div>
+
+      <p class="approach">{{ .Params.approach }}</p>
+
+      <ol class="research-goals">
+        {{ range .Params.goals }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ol>
+    </section>
+
+    <section class="methods" aria-labelledby="methods-tools">
+      <h2 class="methods-heading"
+          id="methods-tools">METHODS AND TOOLS</h2>
+
+      <img class="methods-image"
+           src="{{ .Params.methods_image }}"
+           alt="Multimodal neuroimaging approach combining laboratory-based and real-world studies"
+           loading="lazy">
+
+      <div class="method-list">
+        {{ range .Params.methods }}
+          <details class="method-card">
+            <summary>
+              <span class="method-title">{{ .title }}</span>
+
+              <span class="method-toggle">
+                <span class="read-label">Read more</span>
+                <span class="collapse-label">Collapse</span>
+              </span>
+            </summary>
+
+            <div class="method-body">
+              <img src="{{ .image }}"
+                   alt="{{ .alt }}"
+                   loading="lazy">
+              <p>{{ .text }}</p>
+            </div>
+          </details>
+        {{ end }}
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Stangl Lab<br>
+      Boston University<br>
+      610 Commonwealth Ave<br>
+      Boston, MA 02215
+    </p>
+  </footer>
+</body>
+</html>
