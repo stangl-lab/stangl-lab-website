@@ -1,0 +1,78 @@
+/* Reserve scrollbar space so pages do not shift horizontally. */
+html {
+  overflow-y: scroll;
+}
+
+.stangl-header {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 980px;
+  min-height: 88px;
+  margin: 0 auto;
+  padding: 14px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 4px solid #e5e5e5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.stangl-brand {
+  display: block;
+  flex: 0 0 220px;
+}
+
+.stangl-brand img {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+}
+
+.stangl-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.stangl-menu a {
+  color: #111;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.stangl-menu a[aria-current="page"],
+.stangl-menu a:hover {
+  color: #b30815;
+}
+
+.stangl-header a:focus-visible {
+  outline: 2px solid #b30815;
+  outline-offset: 5px;
+}
+
+@media (max-width: 800px) {
+  .stangl-header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px 0;
+  }
+
+  .stangl-brand {
+    flex: 0 0 auto;
+  }
+
+  .stangl-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+  }
+
+  .stangl-menu a {
+    font-size: 13px;
+  }
+}
