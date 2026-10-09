@@ -258,7 +258,7 @@
         <p>{{ .Params.focus }}</p>
 
         <img class="focus-image"
-             src="{{ .Params.focus_image }}"
+             src="{{ .Params.focus_image | relURL }}"
              alt="Illustration of cognition and spatial navigation">
       </div>
 
@@ -276,7 +276,7 @@
           id="methods-tools">METHODS AND TOOLS</h2>
 
       <img class="methods-image"
-           src="{{ .Params.methods_image }}"
+           src="{{ .Params.methods_image | relURL }}"
            alt="Multimodal neuroimaging approach combining laboratory-based and real-world studies"
            loading="lazy">
 
@@ -293,7 +293,7 @@
             </summary>
 
             <div class="method-body">
-              <img src="{{ .image }}"
+              src="{{ .image | relURL }}"
                    alt="{{ .alt }}"
                    loading="lazy">
               <p>{{ .text }}</p>
