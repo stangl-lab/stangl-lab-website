@@ -13,7 +13,7 @@ members:
     email: "jgonzal2@bu.edu"
     photo: "https://static.wixstatic.com/media/ddd28d_1dd982ae69dc4ad197f9ebc80f922691~mv2.jpg"
 
-  - name: "Yue Guzhang"
+  - name: "Yue Guzhang, PhD"
     role: "Postdoctoral Associate"
     email: "yguzhang@bu.edu"
     photo: "uploads/YueGuzhang_profile.png"
